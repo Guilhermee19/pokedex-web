@@ -1,82 +1,67 @@
-.ligth:root {
-    --theme_dark_light: #F2AF4C;
-    --white: #F9F9FC;
-  
-    --primary_color: #F9F9FC;
-    --second_color: #FFFFFF;
-  
-    --primary-btn: #6A40DB;
-  
-    --yellow-color: #F2AF4C;
-    --green-color: #5DC983;
-    --red-color: #EB5769;
-  
-    --primary-text: #1B2149;
-    --second-text: #f5f5f5;
-  
-    --primary-bg-color: #F9F9FC;
-    --second-bg-color: #FFFFFF;
-  
-    --shadow: rgba(0, 0, 0, 0.05);
-  }
-  
-  :root {
-    --theme_dark_light: #eaedf4;
-    --white: #F9F9FC;
-  
-    --primary_color: #0E1126;
-    --second_color: #15182D;
-  
-    --primary-btn: #6A40DB;
-  
-    --yellow-color: #F2AF4C;
-    --green-color: #5DC983;
-    --red-color: #EB5769;
-  
-    --second-text: #1B2149;
-    --primary-text: #f5f5f5;
-  
-    --primary-bg-color: #0E1126;
-    --second-bg-color: #15182D;
-  
-    --shadow: rgba(0, 0, 0, 0.05);
-  }
-  
-  @mixin center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  @mixin row_between {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  @mixin column_between {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
-  @mixin shadow {
-    box-shadow: 2px 2px 8px var(--shadow);
-  }
-  
-  @mixin animation_init {
-    animation: init_move .8s ease;
-  
-    @keyframes init_move {
-      0%{
-        opacity: 0;
-        transform: translateY(-20px);
-      }
+:root {
+  --theme_dark_light: #f2af4c;
+  --white: #f9f9fc;
+
+  --primary_color: #f9f9fc;
+  --second_color: #ffffff;
+
+  --primary-btn: #6a40db;
+
+  --yellow-color: #f2af4c;
+  --green-color: #5dc983;
+  --red-color: #eb5769;
+
+  --primary-text: #1b2149;
+  --second-text: #f5f5f5;
+
+  --primary-bg-color: #f9f9fc;
+  --second-bg-color: #ffffff;
+
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+.dark:root {
+  --theme_dark_light: #eaedf4;
+  --white: #f9f9fc;
+
+  --primary_color: #0e1126;
+  --second_color: #15182d;
+
+  --primary-btn: #6a40db;
+
+  --yellow-color: #f2af4c;
+  --green-color: #5dc983;
+  --red-color: #eb5769;
+
+  --second-text: #1b2149;
+  --primary-text: #f5f5f5;
+
+  --primary-bg-color: #0e1126;
+  --second-bg-color: #15182d;
+
+  --shadow: rgba(0, 0, 0, 0.05);
+}
+
+@mixin glassmorphism {
+  // background: rgba(166, 227, 255, 0.504);
+  // box-shadow: 0 8px 32px 0 rgba(104, 163, 215, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+@mixin shadow {
+  box-shadow: 2px 2px 8px var(--shadow);
+}
+
+@mixin animation_init {
+  animation: init_move 0.8s ease;
+
+  @keyframes init_move {
+    0% {
+      opacity: 0;
+      // transform: translateY(-20px);
     }
   }
+}

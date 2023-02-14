@@ -1,0 +1,102 @@
+@import '../../../styles/variables';
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    @include glassmorphism;
+    @include animation_init;
+
+    &:hover{
+        transform: scale(1.04);
+    }
+
+    img{
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+    }
+
+    .info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .name_number{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            h3{
+                text-transform: capitalize;
+            }
+        }
+        
+        .types{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            flex-wrap: wrap;
+
+            p{
+                width: max-content;
+                float: left;
+                text-transform: none;
+                border-radius: 3px;
+                padding: 0 15px;
+                font-size: 11px;
+                line-height: 18px;
+                text-align: center;
+            }
+        }
+    }
+
+    .pokeboll{
+        position: absolute;
+        height: 100%;
+        object-fit: contain;
+        bottom: -15px;
+        right: -10px;
+        transform: scale(1.4) rotate(-25deg);
+        filter: blur(1px);
+        opacity: 0.1;
+    }
+
+    &.loading {
+        min-height: 112px;
+
+        background-color: gray;
+        border-radius: 10px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+        background: linear-gradient(270deg, #e1e1e1, #929292, #e1e1e1);
+        background-size: 600% 600%;
+        animation: AnimationName 5s ease infinite;
+
+        &:nth-child(odd){
+            animation-delay: .5s;
+        }
+
+        @keyframes AnimationName {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
+    }
+}

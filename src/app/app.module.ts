@@ -12,6 +12,7 @@ import { PageLoadingComponent } from './components/shared/page-loading/page-load
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { GenerationComponent } from './pages/generation/generation.component';
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
+import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PokemonComponent } from './pages/pokemon/pokemon.component';
     NavbarComponent,
     GenerationComponent,
     PokemonComponent,
+    CardPokemonComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,12 +12,31 @@ export class PokemonService {
     private http: HttpClient,
   ) { }
 
-  getPokemon(): Observable<any> {
-    const options = {
-      headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' }),
+  getPokemonAll(): Observable<any> {
+    let options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
       params: new HttpParams()
     };
 
-    return this.http.get<any>(environment.path + "api/pokedex/kalos", options)
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/?limit=151`, options)
+    // return this.http.get<any>(`https://api.pokemon.com/br/api/pokedex/kalos`, options)
+  }
+
+  getPokemon(name: string): Observable<any> {
+    let options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      params: new HttpParams()
+    };
+
+    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`, options)
+  }
+
+  getGeneration(): Observable<any> {
+    const options = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+      params: new HttpParams()
+    };
+
+    return this.http.get<any>("https://pokeapi.co/api/v2/generation/", options)
   }
 }

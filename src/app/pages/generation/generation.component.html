@@ -1,1 +1,7 @@
-<p>generation works!</p>
+<main>
+    <page-loading *ngIf="loading" class="card_loading"></page-loading>
+    <section *ngIf="!loading">
+        <app-card-pokemon *ngFor="let pok of pokemons; let idx = index" routerLink="/pokemon/{{ pok.name }}"
+            [pokemon]="pok" [index]="idx+1" ></app-card-pokemon>
+    </section>
+</main>

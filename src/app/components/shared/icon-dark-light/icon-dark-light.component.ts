@@ -12,12 +12,12 @@ export class IconDarkLightComponent {
   ngOnInit(){
     let variable = document.getElementsByTagName('html')
 
-    if (localStorage.getItem('_theme_') == "light"){
-      variable.item(0)?.classList.add('ligth');
+    if (localStorage.getItem('_theme_') == "dark"){
+      variable.item(0)?.classList.add('dark');
       this.toggle = true;
     }
     else if(localStorage.getItem('_theme_') == "dark"){
-      variable.item(0)?.classList.remove('ligth');
+      variable.item(0)?.classList.remove('dark');
       this.toggle = false;
     }
   }
@@ -25,14 +25,14 @@ export class IconDarkLightComponent {
   changeTheme(){
     let variable = document.getElementsByTagName('html')
 
-    if (localStorage.getItem('_theme_') == "light"){
-      variable.item(0)?.classList.remove('ligth');
+    if (localStorage.getItem('_theme_') == "dark"){
+      variable.item(0)?.classList.remove('dark');
       localStorage.setItem('_theme_', 'dark');
       this.toggle = false;
     }
     else{
-      variable.item(0)?.classList.add('ligth');
-      localStorage.setItem('_theme_', 'light')
+      variable.item(0)?.classList.add('dark');
+      localStorage.setItem('_theme_', 'dark')
       this.toggle = true;
     }
   }

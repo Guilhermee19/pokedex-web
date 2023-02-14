@@ -1,1 +1,7 @@
-<p>pokemon works!</p>
+<main *ngIf="!loading">
+    {{ pokemon?.name }}
+    <!-- <img [src]="pokemon.sprites.front_default" alt=""> -->
+    <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+number_pokedex+'.png'" alt="">
+</main>
+
+<page-loading *ngIf="loading" class="card_loading"></page-loading>
