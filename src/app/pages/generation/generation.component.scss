@@ -3,28 +3,16 @@ main{
     margin: 10px auto;
 
     section{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 20px;
-        
-        @media screen and (max-width: 1620px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        @media screen and (max-width: 1390px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        @media screen and (max-width: 1080px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @media screen and (max-width: 700px) {
-            max-width: 500px;
-            margin: 0 auto;
-            grid-template-columns: repeat(1, 1fr);
-        }
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
 
-        app-card-pokemon{
-            width: 100%;
-        }
+      .empty,
+      app-card-pokemon{
+        min-width: 300px;
+        flex: 1;
+      }
     }
 }

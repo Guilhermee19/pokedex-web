@@ -1,6 +1,51 @@
-main{
-    img{
-        width: 200px;
-        object-fit: contain;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  figure {
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      position: absolute;
+      width: 100%;
+      object-fit: contain;
+
+      &.circle{
+        width: 66.7%;
+      }
+
+      &.bg{
+        width: 100%;
+        animation: rotate-anime 3s linear infinite;
+      }
+
+      &.pokemon{
+        width: 66.7%;
+      }
     }
+  }
+
+  h1{
+    color: white;
+    text-transform: capitalize;
+  }
+}
+
+@keyframes rotate-anime{
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
 }

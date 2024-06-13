@@ -1,20 +1,21 @@
 <section *ngIf="pokemon?.types" [class]="'background '+pokemon.types[0].type.name">
   <img src="https://pokemon-react-635a4.web.app/images/animated/{{index}}.gif" alt="" />
   <!-- <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+number_pokedex+'.png'" alt=""> -->
-  
+
   <div class="info">
     <div class="name_number">
       <h3>{{ pokemon.name }}</h3>
       <h4>#{{ number_pokedex }}</h4>
     </div>
-    
+
     <div class="types">
       <p *ngFor="let type of pokemon.types" [class]="type.type.name"> {{ type.type.name }} </p>
     </div>
   </div>
 
   <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/pokeball_icon_136305.png" class="pokeboll" alt="">
-</section>
+  </section>
 
 <section *ngIf="!pokemon?.types" class="loading background">
+  <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/pokeball_icon_136305.png" class="pokeboll" alt="">
 </section>

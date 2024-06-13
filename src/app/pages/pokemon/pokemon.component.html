@@ -1,7 +1,22 @@
 <main *ngIf="!loading">
+  <!-- <img [src]="pokemon.sprites.front_default" alt=""> -->
+
+  <figure>
+    <img class="circle" src="../../../assets/pokemon_circle_bg.png" alt="">
+    <img class="bg" src="../../../assets/pokemon_bg.png" alt="">
+    <img class="pokemon"
+      [src]="
+        'https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/' +
+        number_pokedex.toString().padStart(3, '0') +
+        '.png'
+      "
+      alt=""
+    />
+  </figure>
+
+  <h1>
     {{ pokemon?.name }}
-    <!-- <img [src]="pokemon.sprites.front_default" alt=""> -->
-    <img [src]="'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'+number_pokedex+'.png'" alt="">
+  </h1>
 </main>
 
 <page-loading *ngIf="loading" class="card_loading"></page-loading>
