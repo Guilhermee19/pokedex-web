@@ -1,0 +1,81 @@
+main{
+  position: relative;
+  width: 100%;
+  height: max-content;
+  padding: 1rem;
+  padding-left: 5rem;
+
+  .types{
+    position: fixed;
+    width: 3rem;
+    height: calc(100vh - 4rem);
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+
+    .card-type{
+      cursor: pointer;
+      transition: all .5s;
+      opacity: 0.5;
+
+      img{
+        width: 23px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+      }
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &.active{
+        opacity: 1;
+
+        img{
+          width: 30px !important;
+        }
+      }
+    }
+  }
+
+  section{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    padding: 1rem;
+
+    app-card-pokemon,
+    .empty{
+      max-width: 450px;
+      min-width: 140px;
+      flex: 1;
+      transition: all .2s;
+    }
+
+    &.not_found{
+      min-height: calc(100vh - 2rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h3{
+        color: rgba(255, 255, 255, 0.3);
+        text-align: center;
+        font-weight: 200;
+      }
+    }
+  }
+
+  .mat-badge-medium .mat-badge-content{
+    --mat-badge-background-color: #30a7d7;
+    font-size: 12px;
+  }
+}

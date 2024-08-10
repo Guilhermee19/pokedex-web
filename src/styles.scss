@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@use "styles/theming" as theming;
+
+@include mat.core();
+
+$my-primary: mat.define-palette(theming.$my-palette, 500);
+$my-accent: mat.define-palette(theming.$my-palette, 200, 100, 400);
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+    density: 0,
+  )
+);
+
+@include mat.all-component-themes($my-theme);
+
+@import "styles/buttons";
+@import "styles/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--bg_color);
+}

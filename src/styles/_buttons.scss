@@ -1,0 +1,7 @@
+a:-webkit-any-link:not(
+    .mat-mdc-icon-button,
+    .mat-mdc-button,
+    .mat-mdc-button-base
+  ) {
+    text-decoration: none;
+}
