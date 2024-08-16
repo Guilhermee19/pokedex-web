@@ -21,6 +21,7 @@ $my-theme: mat.define-light-theme(
 @include mat.all-component-themes($my-theme);
 
 @import "styles/buttons";
+@import "styles/pokemon";
 @import "styles/variables";
 
 * {

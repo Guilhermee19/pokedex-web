@@ -1,36 +1,39 @@
-<main>
-  <div class="types">
-    @for (type of types; track $index) {
-      <div class="card-type"
-        [class]="{'active': type.label === select_type}"
-        [matBadge]="type.label === select_type && select_type ? pokemonsFilter.length : ''"
-        (click)="filterTypePokemon(type.label)"
-      >
-        <img [src]="type.img" alt="">
-      </div>
-    }
-  </div>
-
-  <!-- <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
-    @for (gen of generations; track gen) {
-      <mat-chip-option selected color="primary">{{gen.label}}</mat-chip-option>
-    }
-  </mat-chip-listbox> -->
-
-  @if (pokemonsFilter.length > 0) {
-    <section>
-      @for (pok of pokemonsFilter; track $index) {
-        <app-card-pokemon [pokemon]="pok" />
+@if(!loading){
+  <main>
+    <div class="types">
+      @for (type of types; track $index) {
+        <div class="card-type"
+          [class]="{'active': type.label === select_type}"
+          [matBadge]="type.label === select_type && select_type ? pokemonsFilter.length : ''"
+          (click)="filterTypePokemon(type.label)"
+        >
+          <img [src]="type.img" alt="">
+        </div>
       }
+    </div>
 
-      @for (item of [].constructor(20); track $index) {
-        <div class="empty"></div>
+    <!-- <mat-chip-listbox class="mat-mdc-chip-set-stacked" aria-label="Color selection">
+      @for (gen of generations; track gen) {
+        <mat-chip-option selected color="primary">{{gen.label}}</mat-chip-option>
       }
-    </section>
-  }
-  @else {
-    <section class="not_found">
-      <h3> Nenhum pokemon encontrado. </h3>
-    </section>
-  }
-</main>
+    </mat-chip-listbox> -->
+
+    @if (pokemonsFilter.length > 0) {
+      <section>
+        @for (pok of pokemonsFilter; track $index) {
+          <app-pokemon [pokemon]="pok" />
+        }
+
+        @for (item of [].constructor(20); track $index) {
+          <div class="empty"></div>
+        }
+      </section>
+    }
+    @else {
+      <section class="not_found">
+        <h3> Nenhum pokemon encontrado. </h3>
+      </section>
+    }
+  </main>
+
+}

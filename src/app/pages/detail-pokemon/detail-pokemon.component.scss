@@ -1,0 +1,102 @@
+@import "swiper/swiper.min.css";
+@import "swiper/swiper-bundle.min.css";
+@import 'swiper/css/effect-cards';
+
+main#detailPokemon{
+  width: 100%;
+
+  .info-top{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    transition: all .2s;
+
+    figure{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 20;
+
+      img{
+        width: max-content;
+        object-fit: contain;
+      }
+    }
+
+    .shape {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+
+      svg {
+        position: relative;
+        display: block;
+        width: calc(273% + 1.3px);
+        height: 261px;
+
+        .shape-fill {
+          fill: var(--bg_color);
+        }
+      }
+
+    }
+  }
+
+  .swiper {
+    position: absolute;
+    width: max-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* position: relative; */
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+
+    .swiper-wrapper{
+      .swiper-slide{
+        position: relative;
+        width: 100%;
+        // min-height: 500px;
+        display: flex;
+        aspect-ratio: 4 / 6;
+        border-radius: 16px;
+        transform: scale(.9);
+        filter: brightness(.5);
+
+        &.swiper-slide-active{
+          position: relative;
+          z-index: 90;
+          transform: scale(1);
+          filter: brightness(1);
+        }
+
+        app-card-pokemon{
+          position: absolute;
+          width: max-content;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 50;
+        }
+      }
+    }
+  }
+}
+

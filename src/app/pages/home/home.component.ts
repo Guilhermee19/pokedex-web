@@ -1,22 +1,24 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { IPokemon } from '../../model/pokemon';
-import { CardPokemonComponent } from '../../components/shared/card-pokemon/card-pokemon.component';
 import { GENERATIONS, TYPES } from '../../constants/utils';
 import { MatChipsModule } from '@angular/material/chips';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
+import { PokemonComponent } from '../../component/pokemon/pokemon.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardPokemonComponent, MatChipsModule, MatBadgeModule],
+  imports: [PokemonComponent, MatChipsModule, MatBadgeModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit{
   private pokemonService = inject(PokemonService)
   private fb = inject(FormBuilder);
+
+  loading = true;
 
   pokemons: IPokemon[] = []
   generations = GENERATIONS
@@ -41,12 +43,12 @@ export class HomeComponent implements OnInit{
   }
 
   getPokemonAll(){
-    this.pokemonService.getPokemonAll(this.generation).subscribe({
-      next: (data) =>{
-        console.log(data);
-        this.pokemons = data;
-      }
-    })
+    this.loading = true;
+
+    setTimeout(() => {
+      this.pokemons = this.pokemonService.list_pokemons;
+      this.loading = false;
+    }, 500);
   }
 
   filterTypePokemon(type: string){
@@ -65,7 +67,3 @@ export class HomeComponent implements OnInit{
                                 el?.primaryType.names.English === this.select_type)
   }
 }
-
-
-// pokemon?.secondaryType?.names?.English
-// pokemon?.primaryType.names.English

@@ -1,0 +1,122 @@
+.type_bg{
+
+  &.bug{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #c7e64c, #79a01c);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.dragon{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #189fde, #024c90);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.electric{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #f6e488, #b59a22);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.fairy{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #f6b3ed, #b55bae);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.fighting{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #f65c62, #a32f51);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.fire{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #f8b255, #a1531c);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.flying{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #b9d0f8, #576ea1);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.ghost{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #9893f0, #3b4b8a);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.grass{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #7ad897, #35742e);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.ground{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #d29868, #d97749);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.ice{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #9de6e2, #67b5a8);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.normal{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #b3b1ab, #858b94);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.poison{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #ca67dc, #955ab7);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.psychic{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #feafa6, #da6064);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.rock{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #e0d7a1, #8c805e);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.steel{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #57a9ab, #55889c);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+  &.water{
+    background: url('https://pokedexplore.vercel.app/svgs/bg-balls.svg'), linear-gradient(180deg, #75c1e4, #4f8fd5);
+    background-size: 101%;
+    background-position: bottom, 50%;
+    background-repeat: no-repeat;
+    transition: all .2s;
+  }
+}

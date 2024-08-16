@@ -1,0 +1,14 @@
+<nav>
+  <a routerLink="/">
+    <figure>
+      <img src="../../../assets/logo.png" alt="">
+    </figure>
+  </a>
+</nav>
+
+@if(!loading){
+  <router-outlet />
+}
+@else {
+  <h5>Loading...</h5>
+}

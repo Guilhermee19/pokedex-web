@@ -4,6 +4,7 @@ main{
   height: max-content;
   padding: 1rem;
   padding-left: 5rem;
+  padding-top: 100px;
 
   .types{
     position: fixed;
@@ -52,7 +53,7 @@ main{
     gap: 1rem 2rem;
     padding: 1rem;
 
-    app-card-pokemon,
+    app-pokemon,
     .empty{
       max-width: 450px;
       min-width: 140px;

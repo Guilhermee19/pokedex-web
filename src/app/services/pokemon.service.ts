@@ -9,17 +9,27 @@ import { IPokemon } from '../model/pokemon';
 export class PokemonService {
   private http = inject(HttpClient)
 
+  list_pokemons: IPokemon[] = []
+
+  set pokemons(list_pokemons: IPokemon[]){
+    this.list_pokemons = list_pokemons;
+  }
+
+  get pokemons(){
+    return this.list_pokemons;
+  }
+
   getPokemonAll(generation = 1): Observable<IPokemon[]> {
     return this.http.get<IPokemon[]>(`https://pokemon-go-api.github.io/pokemon-go-api/api/pokedex/generation/${generation}.json`)
   }
 
-  getPokemon(name: string): Observable<any> {
+  getPokemon(id: string): Observable<IPokemon> {
     let options = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
       params: new HttpParams()
     };
 
-    return this.http.get<any>(`https://pokeapi.co/api/v2/pokemon/${name}`, options)
+    return this.http.get<IPokemon>(`https://pokemon-go-api.github.io/pokemon-go-api/api/pokedex/name/${id}.json`, options)
   }
 
   getGeneration(): Observable<any> {
